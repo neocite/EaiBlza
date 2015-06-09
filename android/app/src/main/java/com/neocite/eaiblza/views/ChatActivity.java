@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -36,6 +37,7 @@ public class ChatActivity extends Activity implements Subscriber<Message>,Connec
 
     ArrayList<Message> messages;
     ListView receivedMessages;
+    Button sendButton;
     ChatSendMessageAdapter messageArrayAdapter;
     MessageController messageController;
     LocationManager locationManager;
@@ -50,7 +52,9 @@ public class ChatActivity extends Activity implements Subscriber<Message>,Connec
         messages = new ArrayList<Message>();
         messageArrayAdapter = new ChatSendMessageAdapter(this, messages);
         receivedMessages =  (ListView) findViewById(R.id.receive_message);
+        sendButton = (Button) findViewById(R.id.send_message);
         receivedMessages.setAdapter(messageArrayAdapter);
+        sendButton.setAlpha(0);
 
 
     }
@@ -117,6 +121,7 @@ public class ChatActivity extends Activity implements Subscriber<Message>,Connec
             System.out.println("Provider " + provider + " has been selected.");
             onLocationChanged(location);
         }
+        sendButton.setAlpha(1);
 
     }
 

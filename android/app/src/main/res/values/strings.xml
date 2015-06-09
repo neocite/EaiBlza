@@ -2,7 +2,7 @@
     <string name="app_name">Eai, Flza?</string>
     <string name="edit_message">Diga alguma coifa</string>
     <string name="receive_message">Conferfaf</string>
-    <string name="button_send">Enfiar</string>
+    <string name="send_message">Enfiar</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My message</string>

@@ -1,5 +1,7 @@
 package com.neocite.eaiblza.infrastructure.MQTT;
 
+import android.util.Log;
+
 import com.neocite.eaiblza.infrastructure.translate.dinofauro;
 
 import org.fusesource.hawtbuf.Buffer;
@@ -34,7 +36,7 @@ public class ConnectionManager implements TopicPublisher,ConnectionPublisher {
     protected ConnectionManager() {
         mqtt = new MQTT();
         try {
-            mqtt.setHost("54.152.165.167", 1883);
+            mqtt.setHost("54.84.155.100", 1883);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -71,10 +73,16 @@ public class ConnectionManager implements TopicPublisher,ConnectionPublisher {
             final CallbackConnection listener = connection.listener(new Listener() {
                 @Override
                 public void onConnected() {
+                    for(ConnectionSubscriber connectionSubscriber:connectionSubscribers){
+                        connectionSubscriber.connected();
+                    }
                 }
 
                 @Override
                 public void onDisconnected() {
+                    for(ConnectionSubscriber connectionSubscriber:connectionSubscribers){
+                        connectionSubscriber.notConnected();
+                    }
                 }
 
                 @Override
@@ -94,6 +102,7 @@ public class ConnectionManager implements TopicPublisher,ConnectionPublisher {
 
                 @Override
                 public void onFailure(Throwable value) {
+                    final int d = Log.d("s",value.getMessage());
                 }
             });
         }

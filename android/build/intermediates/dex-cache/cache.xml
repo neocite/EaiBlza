@@ -2,67 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/classes-5c5858340f20129c8ff10228cd58250fc9e22490.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch/1.20/390fa83e97939c333ae1f82738ff5210294f720c/hawtdispatch-1.20.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="390fa83e97939c333ae1f82738ff5210294f720c">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/hawtdispatch-1.20-6483462fc78e22d3fff42122c92aac778bbe2125.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-237169d8f39ccdbc3bcb3010a65d26889a5c0364.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/exploded-aar/info.hoang8f/fbutton/1.0.5/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="2c12397a785c3b1868fbebeffc9553457b27803f">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/classes-74e658dd4a5bd8aa317f3a587df35ee169e511ee.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jar="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-b673e29c1b99865db3235eaf23cec372c0afb81f.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtbuf/hawtbuf/1.10/a20907168eb4f05c8f777e1671d8070cd06715e4/hawtbuf-1.10.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a20907168eb4f05c8f777e1671d8070cd06715e4">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/hawtbuf-1.10-e6427f65a840eab99997d160ebf1f3ae55efd511.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/classes-1c6d66801021286e073afc83bd95d60837af6611.jar" />
-    </item>
-    <item
-        jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch-transport/1.20/b4f58ecdc9fa770b86f1caf88da7ed71eaa511f2/hawtdispatch-transport-1.20.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b4f58ecdc9fa770b86f1caf88da7ed71eaa511f2">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/hawtdispatch-transport-1.20-50f851302ac004100d2abd276f50f1eedb811b8c.jar" />
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-5cad7b05457a1dfc49ea6553d7c65ca2525b244d.jar" />
     </item>
     <item
         jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.mqtt-client/mqtt-client/1.10/b7fd7e41d2f5a9d4391d6830dc1bb69627845268/mqtt-client-1.10.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="b7fd7e41d2f5a9d4391d6830dc1bb69627845268">
-        <dex dex="/Users/paulo-silva/Projects/EaiBlza/app/build/intermediates/pre-dexed/debug/mqtt-client-1.10-beb214c759f0d15e11aef321a8566c57bb8ef897.jar" />
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/mqtt-client-1.10-beb214c759f0d15e11aef321a8566c57bb8ef897.jar" />
+    </item>
+    <item
+        jar="/Users/paulo-silva/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-237169d8f39ccdbc3bcb3010a65d26889a5c0364.jar" />
+    </item>
+    <item
+        jar="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/classes-5bd57a6f4d71484bf5e259ae717c005dc8a5e1bd.jar" />
+    </item>
+    <item
+        jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtbuf/hawtbuf/1.10/a20907168eb4f05c8f777e1671d8070cd06715e4/hawtbuf-1.10.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a20907168eb4f05c8f777e1671d8070cd06715e4">
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/hawtbuf-1.10-e6427f65a840eab99997d160ebf1f3ae55efd511.jar" />
+    </item>
+    <item
+        jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch-transport/1.20/b4f58ecdc9fa770b86f1caf88da7ed71eaa511f2/hawtdispatch-transport-1.20.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b4f58ecdc9fa770b86f1caf88da7ed71eaa511f2">
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/hawtdispatch-transport-1.20-50f851302ac004100d2abd276f50f1eedb811b8c.jar" />
+    </item>
+    <item
+        jar="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/classes-d71ad618bec833b27fcf0730fb2b37f54b9fddf5.jar" />
+    </item>
+    <item
+        jar="/Users/paulo-silva/.gradle/caches/modules-2/files-2.1/org.fusesource.hawtdispatch/hawtdispatch/1.20/390fa83e97939c333ae1f82738ff5210294f720c/hawtdispatch-1.20.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="390fa83e97939c333ae1f82738ff5210294f720c">
+        <dex dex="/Users/paulo-silva/Projects/EaiBlza/android/app/build/intermediates/pre-dexed/debug/hawtdispatch-1.20-6483462fc78e22d3fff42122c92aac778bbe2125.jar" />
     </item>
 
 </items>
