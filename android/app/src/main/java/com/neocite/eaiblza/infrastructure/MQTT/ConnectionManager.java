@@ -36,7 +36,7 @@ public class ConnectionManager implements TopicPublisher,ConnectionPublisher {
     protected ConnectionManager() {
         mqtt = new MQTT();
         try {
-            mqtt.setHost("54.84.155.100", 1883);
+            mqtt.setHost("broker.eaiblza.com.br",1883);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
