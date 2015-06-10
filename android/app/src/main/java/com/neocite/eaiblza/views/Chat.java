@@ -38,6 +38,8 @@ import java.util.Locale;
 
 public class Chat extends Activity implements Subscriber<Message>,ConnectionSubscriber, LocationListener {
 
+    private static final long LOCATION_REFRESH_TIME = 1;
+    private static final long LOCATION_REFRESH_DISTANCE = 0;
     ArrayList<Message> messages;
     ListView receivedMessages;
     Button sendButton;
@@ -63,10 +65,13 @@ public class Chat extends Activity implements Subscriber<Message>,ConnectionSubs
 
     }
 
+
+
     private void getCurrentLocation(){
         Criteria criteria = new Criteria();
+
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        provider = locationManager.getBestProvider(criteria, false);
+        provider = String.valueOf(locationManager.getProvider("GPS"));
         Location location = locationManager.getLastKnownLocation(provider);
 
         if (location != null) {

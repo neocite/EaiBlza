@@ -34,7 +34,7 @@ public class MessageController implements Subscriber<Message>,Publisher<Message>
 
     public void sendNewMessage(String valueMessage){
 
-        Message message = new Message(valueMessage,"Alguem em, "+ownerLocation+", disse:");
+        Message message = new Message(valueMessage,"Algum dinoffauro diffe:");
         messageRepository.save(message);
     }
 
