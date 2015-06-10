@@ -28,6 +28,9 @@ public class dinofauro {
         message = message.replace("é", "e");
         message = message.replace("É", "E");
 
+        message = message.replace("ê", "e");
+        message = message.replace("Ê", "E");
+
         message = message.replace("V", "F");
         message = message.replace("S", "F");
         message = message.replace("B", "F");

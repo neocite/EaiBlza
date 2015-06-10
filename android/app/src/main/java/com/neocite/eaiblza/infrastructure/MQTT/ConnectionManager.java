@@ -15,9 +15,13 @@ import org.fusesource.mqtt.client.Topic;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URISyntaxException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.net.ssl.SSLContext;
 
 /**
  * Created by paulo-silva on 6/2/15.
@@ -36,7 +40,8 @@ public class ConnectionManager implements TopicPublisher,ConnectionPublisher {
     protected ConnectionManager() {
         mqtt = new MQTT();
         try {
-            mqtt.setHost("broker.eaiblza.com.br",1883);
+            //URI uri = new URI("tcp://broker.eaiblza.com.br:1883");
+            mqtt.setHost("54.84.155.100",1883);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -73,9 +78,7 @@ public class ConnectionManager implements TopicPublisher,ConnectionPublisher {
             final CallbackConnection listener = connection.listener(new Listener() {
                 @Override
                 public void onConnected() {
-                    for(ConnectionSubscriber connectionSubscriber:connectionSubscribers){
-                        connectionSubscriber.connected();
-                    }
+
                 }
 
                 @Override

@@ -1,8 +1,10 @@
 package com.neocite.eaiblza.views;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Criteria;
@@ -17,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
 
 import com.neocite.eaiblza.R;
 import com.neocite.eaiblza.controllers.MessageController;
@@ -33,7 +36,7 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class ChatActivity extends Activity implements Subscriber<Message>,ConnectionSubscriber, LocationListener {
+public class Chat extends Activity implements Subscriber<Message>,ConnectionSubscriber, LocationListener {
 
     ArrayList<Message> messages;
     ListView receivedMessages;
@@ -41,22 +44,48 @@ public class ChatActivity extends Activity implements Subscriber<Message>,Connec
     ChatSendMessageAdapter messageArrayAdapter;
     MessageController messageController;
     LocationManager locationManager;
-    private String provider;
+    String provider;
+    AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         assignSubscriberToStatusConnection();
         startCommunicationService();
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.chat);
         messages = new ArrayList<Message>();
         messageArrayAdapter = new ChatSendMessageAdapter(this, messages);
-        receivedMessages =  (ListView) findViewById(R.id.receive_message);
-        sendButton = (Button) findViewById(R.id.send_message);
+        receivedMessages =  (ListView) findViewById(R.id.list);
+        sendButton = (Button) findViewById(R.id.send_button);
         receivedMessages.setAdapter(messageArrayAdapter);
-        sendButton.setAlpha(0);
+        getCurrentLocation();
+        showWaitMessage();
 
+    }
 
+    private void getCurrentLocation(){
+        Criteria criteria = new Criteria();
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        provider = locationManager.getBestProvider(criteria, false);
+        Location location = locationManager.getLastKnownLocation(provider);
+
+        if (location != null) {
+            System.out.println("Provider " + provider + " has been selected.");
+            onLocationChanged(location);
+        }
+    }
+
+    private void showWaitMessage(){
+
+        alertDialog = new AlertDialog.Builder(this)
+                .setTitle("Eai, flza?")
+                .setMessage("Aguarde....conecfando ao DinoFerferf")
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .show();
+    }
+
+    private void closeWaitMessage(){
+        alertDialog.cancel();
     }
 
     private void startCommunicationService(){
@@ -75,19 +104,10 @@ public class ChatActivity extends Activity implements Subscriber<Message>,Connec
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     public void sendMessage(View view) {
+        getCurrentLocation();
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String actualMessage = editText.getText().toString();
         messageController.sendNewMessage(actualMessage);
@@ -111,17 +131,8 @@ public class ChatActivity extends Activity implements Subscriber<Message>,Connec
 
         messageController = MessageController.getInstance();
         messageController.addSubscriber(this);
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        Criteria criteria = new Criteria();
-        provider = locationManager.getBestProvider(criteria, false);
-        Location location = locationManager.getLastKnownLocation(provider);
-
-        if (location != null) {
-            System.out.println("Provider " + provider + " has been selected.");
-            onLocationChanged(location);
-        }
-        sendButton.setAlpha(1);
+        closeWaitMessage();
 
     }
 
