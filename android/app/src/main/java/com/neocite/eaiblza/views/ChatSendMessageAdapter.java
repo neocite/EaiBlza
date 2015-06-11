@@ -53,7 +53,7 @@ public class ChatSendMessageAdapter extends ArrayAdapter<Message> {
         labelView.setText(itemsArrayList.get(position).getOwner());
         valueView.setText(itemsArrayList.get(position).getValue());
 
-        String format = "dd/MM/yyyy HH:mm";
+        String format = "dd/MM/yyyy HH:mm:ss";
 
         SimpleDateFormat brazilDateTimeFormat = new SimpleDateFormat(format, Locale.US);
 
